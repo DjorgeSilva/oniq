@@ -1,24 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from "./GlobalStyles.js";
+import { Home } from "./Routes/Home/Home"
+import { Nav } from "./Components/Nav/Nav"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+const theme = {
+  primary_color: "#FC6621",
+  secundary_color: "#00416D",
+  ternary_color: "#fff",
+  font_color: "#333",
+  font_padrao: "Roboto, sans-serif"
+};
+
 
 function App() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  // retorna o tamanho da tela
+  const size = useWindowSize();
+
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+
+      window.addEventListener("resize", handleResize);
+
+      handleResize();
+
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowSize;
+  }
+  // retorna o tamanho da tela
+
+  const AuthenticatedRoutes = () => {
+    return (
+      <Router>
+      </Router>
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Nav isOpen={isOpen} setIsOpen={setIsOpen} sizeScreen={size.width} />
+            <Route path="/" exact>
+              <Home isOpen={isOpen} />
+            </Route>
+        </ThemeProvider>
+      </Router>
+    </>
   );
 }
 
