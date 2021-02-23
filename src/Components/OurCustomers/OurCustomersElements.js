@@ -9,10 +9,14 @@ export const InnerGrid = styled.div`
     width: 80%;
     height: fit-content;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @media (min-width: 950px){
         margin-top: 100px;
-        }
+    }
 
     h1{
         display: block;
@@ -32,12 +36,13 @@ export const InnerGrid = styled.div`
         display: block;
         width: 90%;
         font-size: clamp(1.4rem, 2.5vw, 1.4rem);
-        color:#5e5e5e;
+        color:#8f8f8f;
         margin: 20px auto;
         text-align: center;
         font-weight: 600;
         line-height: 30px;
         overflow:hidden;
+        margin-bottom: 30px;
 
         @media (min-width: 950px){
             text-align:left;
@@ -52,8 +57,19 @@ export const InnerGrid = styled.div`
         align-items: center;
         margin: 15px 0;
         img{
-            width: 100%;
+            width: 120px;
             object-fit: cover;
+
+            @media (min-width: 950px){
+                width: 100%;
+            }
+
+            @media (min-width: 1200px){
+                width: 105%;
+            }
         }
+        @media (min-width: 1200px){
+                margin-top: 60px;
+            }
     }
 `

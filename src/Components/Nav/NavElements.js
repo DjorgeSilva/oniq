@@ -118,6 +118,7 @@ export const SideBar = styled.div`
         justify-content: center;
         align-items: center;
         overflow-y: hidden;
+
         ul{
             width: 100%;
             list-style: none;
@@ -134,6 +135,11 @@ export const SideBar = styled.div`
             }
         }
     }
+
+    @media (min-width: 950px){
+        visibility: hidden;
+    }
+
 `
 
 export const Links = styled(Link)`

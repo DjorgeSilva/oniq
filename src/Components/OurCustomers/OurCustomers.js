@@ -36,7 +36,7 @@ export const OurCustomers = () => {
 
                         <InnerGrid>
                             <Row>
-                                <Col sm={8} md={4} lg={3} xl={2} className="coluna">
+                                <Col sm={6} md={4} lg={3} xl={2} className="coluna">
                                     <img src={logo1} alt="" />
                                 </Col>
 
