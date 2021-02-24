@@ -26,7 +26,7 @@ export const Container = styled.div`
         top: 10%;
         right: 0;
         z-index: 10000;
-        
+
     }
 `
 
@@ -67,6 +67,7 @@ export const InnerGrid = styled.div`
     }
 `
 export const Fundo = styled.div`
+    display: none;
     width: 75vh;
     height: fit-content;
     position: relative;
@@ -74,8 +75,8 @@ export const Fundo = styled.div`
     overflow: hidden;   
     z-index: 10;
 
-    @media (max-width: 968px){
-        display: none;
+    @media (min-width: 960px){
+        display: block;
     }
 
     .fundo{

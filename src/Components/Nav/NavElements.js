@@ -1,10 +1,12 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
-export const NavMenu = styled.nav`
+
+
+export const Container = styled.div`
     width: 100%;
     height: 80px;
-    padding: 10px 15px;
+    padding: 20px 15px;
     overflow: hidden;
     position: fixed;
     background: #fff;
@@ -14,6 +16,13 @@ export const NavMenu = styled.nav`
     transform: translate(-50%, -610%);
 
     z-index: 600000000000;
+
+
+`;
+
+export const NavMenu = styled.nav`
+    width: 100%;
+    height: 100px;
 
     @media (min-width: 1300px){
         width: 1300px;
@@ -26,6 +35,7 @@ export const NavItemLogo = styled.div`
     width: 50%;
     height: fit-content;
     float: left;
+    
 
     img{
         cursor: pointer;
@@ -38,17 +48,20 @@ export const NavItemLogo = styled.div`
     }
 
     @media (min-width: 950px){
-            width: 20%;
+            width: 30%;
     }
+
 `
 export const NavMenuDesktop = styled.div`
     width: 70%;
     height: 80px;
+    float: right;
 
     nav{
         width: 100%;
         @media (min-width: 1100px){
             padding-left: 100px;
+            margin-left: 40px;
     }
         ul{
             display: inline-block;
