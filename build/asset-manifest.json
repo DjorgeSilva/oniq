@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.js": "/oniq/static/js/main.0f57b24f.chunk.js",
-    "main.js.map": "/oniq/static/js/main.0f57b24f.chunk.js.map",
+    "main.js": "/oniq/static/js/main.b6d007d0.chunk.js",
+    "main.js.map": "/oniq/static/js/main.b6d007d0.chunk.js.map",
     "runtime-main.js": "/oniq/static/js/runtime-main.c7378244.js",
     "runtime-main.js.map": "/oniq/static/js/runtime-main.c7378244.js.map",
     "static/css/2.150d169a.chunk.css": "/oniq/static/css/2.150d169a.chunk.css",
-    "static/js/2.fcc5a793.chunk.js": "/oniq/static/js/2.fcc5a793.chunk.js",
-    "static/js/2.fcc5a793.chunk.js.map": "/oniq/static/js/2.fcc5a793.chunk.js.map",
+    "static/js/2.7ee6b276.chunk.js": "/oniq/static/js/2.7ee6b276.chunk.js",
+    "static/js/2.7ee6b276.chunk.js.map": "/oniq/static/js/2.7ee6b276.chunk.js.map",
     "index.html": "/oniq/index.html",
     "static/css/2.150d169a.chunk.css.map": "/oniq/static/css/2.150d169a.chunk.css.map",
-    "static/js/2.fcc5a793.chunk.js.LICENSE.txt": "/oniq/static/js/2.fcc5a793.chunk.js.LICENSE.txt",
+    "static/js/2.7ee6b276.chunk.js.LICENSE.txt": "/oniq/static/js/2.7ee6b276.chunk.js.LICENSE.txt",
     "static/media/about-1.72dadab4.png": "/oniq/static/media/about-1.72dadab4.png",
+    "static/media/logo-2.c4ab702e.png": "/oniq/static/media/logo-2.c4ab702e.png",
     "static/media/logo11.a3bfa1d9.png": "/oniq/static/media/logo11.a3bfa1d9.png",
     "static/media/service1.653a0fa1.png": "/oniq/static/media/service1.653a0fa1.png",
     "static/media/service2.1b30d6b9.png": "/oniq/static/media/service2.1b30d6b9.png",
@@ -23,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.c7378244.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.fcc5a793.chunk.js",
-    "static/js/main.0f57b24f.chunk.js"
+    "static/js/2.7ee6b276.chunk.js",
+    "static/js/main.b6d007d0.chunk.js"
   ]
 }
