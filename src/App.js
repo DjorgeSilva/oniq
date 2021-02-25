@@ -15,6 +15,7 @@ const theme = {
   primary_color: "#FC6621",
   secundary_color: "#00416D",
   ternary_color: "#fff",
+  color_bg: "#68FDF0",
   font_color: "#333",
   font_padrao: "Roboto, sans-serif"
 };
@@ -65,7 +66,12 @@ function App() {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Nav isOpen={isOpen} setIsOpen={setIsOpen} sizeScreen={size.width} />
-            <Route path="/" exact>
+
+          <Route path="/" exact>
+              <Home isOpen={isOpen} />
+            </Route>
+
+            <Route path="/home-page" exact>
               <Home isOpen={isOpen} />
             </Route>
         </ThemeProvider>

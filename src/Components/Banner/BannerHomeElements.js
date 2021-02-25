@@ -7,7 +7,9 @@ export const BannerTxt = styled.div`
     margin: 0 auto;
     margin-bottom: 30px;
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow-y: hidden;
 
     display: flex;
@@ -21,7 +23,7 @@ export const BannerTxt = styled.div`
 
     h1{
         font-size: clamp(2.5rem, 2.5vw, 3rem);
-        color: ${props=> props.theme.primary_color};
+        color: #fff;
         margin: 10px 0;
         overflow:hidden;
     }
@@ -58,5 +60,9 @@ export const BannerTxt = styled.div`
         border: none;
         font-size: 1.5rem;
         overflow:hidden;
+    }
+
+    @media (min-width: 1100px){
+        width: 80%;
     }
 `

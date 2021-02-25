@@ -1,19 +1,20 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom"
+import { HashLink as HashLink } from 'react-router-hash-link';
+import { Link as Links } from "react-router-dom"
 
 
 
 export const Container = styled.div`
     width: 100%;
-    height: 80px;
+    height: 120px;
     padding: 20px 15px;
     overflow: hidden;
     position: fixed;
     background: #fff;
 
-    top: 50%;
+    top: 3%;
     left: 50%;
-    transform: translate(-50%, -610%);
+    transform: translate(-50%, -50%);
 
     z-index: 600000000000;
 
@@ -23,10 +24,12 @@ export const Container = styled.div`
 export const NavMenu = styled.nav`
     width: 100%;
     height: 100px;
+    margin-top: 22px;
 
     @media (min-width: 1300px){
         width: 1300px;
         margin: 0 auto;
+        margin-top: 20px;
     }
 
 `
@@ -48,27 +51,31 @@ export const NavItemLogo = styled.div`
     }
 
     @media (min-width: 950px){
-            width: 30%;
+            width: 25%;
     }
 
 `
 export const NavMenuDesktop = styled.div`
-    width: 70%;
+    width: 75%;
     height: 80px;
     float: right;
 
     nav{
-        width: 100%;
-        @media (min-width: 1100px){
-            padding-left: 100px;
-            margin-left: 40px;
-    }
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+
         ul{
             display: inline-block;
             li{
                 display: inline;
+                margin-left: 5px;
             }
         }
+
     }
 
 
@@ -76,40 +83,26 @@ export const NavMenuDesktop = styled.div`
             display: none;
     }
 `
-// export const Translate = styled.div`
-//     display: none;
-//     width: 10%;
-//     background: red;
-//     display: flex;
-//     justify-content: space-around;
-//         p{
-//             display: none;
-//             font-weight: bolder;
-//             @media (min-width: 950px){
-//         display: block;
-//     }
-//         }
 
-//         @media (min-width: 950px){
-//         display: block;
-
-// `
-
-export const Linkss = styled(Link)`
-    font-size: 1.5rem;
+export const Linkss = styled(HashLink)`
+    font-size: 1.3rem;
     text-align: center;
     margin-right: 15px;
-    color: ${props => props.theme.secundary_color};
+    color: ${props=> props.theme.secundary_color};
+    text-transform: uppercase;
+    font-weight: bold;
 `
 
 export const NavItemMenu = styled.div`
-    width: 45%;
+    width: 50%;
     height: fit-content;
-    float: right;
 
     img{
+        width: 40px;
         cursor: pointer;
         float: right;
+        margin-top: 10px;
+      
     }
 
     @media (min-width: 950px){
@@ -155,7 +148,7 @@ export const SideBar = styled.div`
 
 `
 
-export const Links = styled(Link)`
+export const Linksss = styled(Links)`
     font-size: 2.2rem;
     text-align: center;
     font-weight: bolder;

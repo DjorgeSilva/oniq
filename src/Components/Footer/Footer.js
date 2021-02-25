@@ -45,7 +45,7 @@ export const Footer = () => {
                     <p>contato@oniq.com.br</p>
                     <p>+5565981677770</p>
                     <p>+556521290041</p>
-                    <p>Avenida Erico Preza Gonçalves Filho, 1253, Sala 14-A, Alpha Mall 1, Jd Italia, Cuiabá-MT</p>
+                    <p>Avenida Erico Preza Gonçalves Filho, 1253, Sala 14-A, Jd Italia, Cuiabá-MT</p>
                 </Col>
 
                 <Col sm={12} className="Coluna">

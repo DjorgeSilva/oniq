@@ -8,5 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: ${props=>props.theme.font_padrao};
         text-decoration: none;
         overflow-x: hidden;
+        scroll-behavior: smooth;
     } 
 `;

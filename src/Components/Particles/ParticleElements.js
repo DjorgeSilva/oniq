@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
-    width: 70%;
+    width: 100%;
     height:80vh;
     position: absolute;
     top: ${({ isOpen }) => (isOpen ? '120px' : '120px')};

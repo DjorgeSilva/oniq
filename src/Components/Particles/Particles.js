@@ -44,16 +44,16 @@ export const ParticlesContainer = ({ isOpen }) => {
                 "random": true,
                 "anim": {
                   "enable": true,
-                  "speed": 10.181158184520175,
-                  "size_min": 1,
+                  "speed": 15.181158184520175,
+                  "size_min": .6,
                   "sync": true
                 }
               },
               "line_linked": {
                 "enable": true,
-                "distance": 150,
+                "distance": 130,
                 "color": "#ff6621",
-                "opacity": 0.4,
+                "opacity": 1,
                 "width": 3
               },
               "move": {

@@ -7,7 +7,7 @@ import { Layout } from "../Layout/Layout"
 
 export const BannerHome = () => {
     return (
-
+        <Layout>
             <BannerTxt>
                 <img src={icone_startup} alt="" />
                 <h1>Technology Strategy:</h1>
@@ -15,5 +15,6 @@ export const BannerHome = () => {
                 <p>Apps, Web sites, Artificial Intelligence, Internet of Things, and Big data we can provide to you!</p>
                 <button type="button">Let's talk?</button>
             </BannerTxt>
+        </Layout>
     )
 }
