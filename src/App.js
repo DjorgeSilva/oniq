@@ -15,7 +15,6 @@ const theme = {
   primary_color: "#FC6621",
   secundary_color: "#00416D",
   ternary_color: "#fff",
-  color_bg: "#68FDF0",
   font_color: "#333",
   font_padrao: "Roboto, sans-serif"
 };
@@ -55,7 +54,10 @@ function App() {
 
   const AuthenticatedRoutes = () => {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Route path="/" exact>
+          <Home isOpen={isOpen} />
+        </Route>
       </Router>
     )
   }
@@ -67,13 +69,10 @@ function App() {
           <GlobalStyle />
           <Nav isOpen={isOpen} setIsOpen={setIsOpen} sizeScreen={size.width} />
 
-          <Route path="/" exact>
-              <Home isOpen={isOpen} />
-            </Route>
+          <Switch>
+            <Route component={AuthenticatedRoutes} />
+          </Switch>
 
-            <Route path="/home-page" exact>
-              <Home isOpen={isOpen} />
-            </Route>
         </ThemeProvider>
       </Router>
     </>

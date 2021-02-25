@@ -18,19 +18,24 @@ export const Nav = ({ isOpen, setIsOpen }) => {
 
     const handler = (scroll, section) =>{
         if(section === "service"){
-                window.scrollTo(0, scroll);
+            window.scrollTo(0, scroll);
+            setIsOpen(!isOpen);
         }
         if(section === "home"){
             window.scrollTo(0, scroll);
+            setIsOpen(!isOpen);
         }
         if(section === "costumer"){
             window.scrollTo(0, scroll);
+            setIsOpen(!isOpen);
         }
         if(section === "about"){
             window.scrollTo(0, scroll);
+            setIsOpen(!isOpen);
         }
         if(section === "contato"){
             window.scrollTo(0, scroll);
+            setIsOpen(!isOpen);
         }
     }
 
@@ -54,11 +59,6 @@ export const Nav = ({ isOpen, setIsOpen }) => {
                         </nav>
                     </NavMenuDesktop>
 
-                    {/* <Translate>
-                    <p>PT</p>
-                    <p>EN</p>
-                </Translate> */}
-
                     <NavItemMenu>
                         <img src={(isOpen?fecharMenu:menuMobile)} alt="menu oniQ" onClick={() => setIsOpen(!isOpen)}/>
                     </NavItemMenu>
@@ -67,12 +67,11 @@ export const Nav = ({ isOpen, setIsOpen }) => {
             <SideBar isOpen={isOpen}>
                 <nav>
                     <ul>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}>Home</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}>Services</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}>Customers</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}>Blog</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}>About us</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}>Contact us</Linksss></li>
+                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(0, "home")}>Home</Linksss></li>
+                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(800, "service")}>Services</Linksss></li>
+                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(1800, "costumer")}>Customers</Linksss></li>
+                        <li><Linksss to="/" style={{ textDecoration: "none" }}  onClick={()=>handler(2200, "about")}>About us</Linksss></li>
+                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(2945, "contato")}>Contact us</Linksss></li>
                     </ul>
                 </nav>
             </SideBar>

@@ -112,10 +112,10 @@ export const NavItemMenu = styled.div`
 export const SideBar = styled.div`
     width: 100%;
     height: 70vh;
-    position: relative;
+    position: fixed;
     top: ${({ isOpen }) => (isOpen ? '20px' : '-1000px')};
     background: ${props => props.theme.ternary_color};
-    z-index: 10000;
+    z-index: 100000000;
     overflow-y: hidden;
     nav{
         width: 100%;
