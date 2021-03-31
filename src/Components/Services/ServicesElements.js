@@ -8,7 +8,7 @@ export const Container = styled.div`
     
     h1{
         display: block;
-        font-size: clamp(4rem, 2.5vw, 5rem);
+        font-size: clamp(3rem, 3vw, 5.5rem);
         color: ${props => props.theme.primary_color};
         margin: 20px auto;
         margin-top: 50px;
@@ -17,7 +17,7 @@ export const Container = styled.div`
     }
     p{
         display: block;
-        width: 60%;
+        width: 90%;
         font-size: clamp(1.4rem, 2.5vw, 1.4rem);
         color:#5e5e5e;
         margin: 20px auto;

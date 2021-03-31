@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import logoIMG from "../../assets/logo.png"
 import menuMobile from "../../assets/menuMobile.png"
-import fecharMenu from"../../assets/botao-fechar.png"
+import fecharMenu from "../../assets/botao-fechar.png"
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import {
     Container,
@@ -10,68 +11,51 @@ import {
     NavMenuDesktop,
     NavItemMenu,
     SideBar,
-    Linksss,
-    Linkss
 } from "./NavElements"
 
 export const Nav = ({ isOpen, setIsOpen }) => {
 
-    const handler = (scroll, section) =>{
-        if(section === "service"){
-            window.scrollTo(0, scroll);
-            setIsOpen(!isOpen);
-        }
-        if(section === "home"){
-            window.scrollTo(0, scroll);
-            setIsOpen(!isOpen);
-        }
-        if(section === "costumer"){
-            window.scrollTo(0, scroll);
-            setIsOpen(!isOpen);
-        }
-        if(section === "about"){
-            window.scrollTo(0, scroll);
-            setIsOpen(!isOpen);
-        }
-        if(section === "contato"){
-            window.scrollTo(0, scroll);
-            setIsOpen(!isOpen);
-        }
-    }
+
+
+    const scrollToTop = () => {
+        scroll.scrollToTop(-100);
+        setIsOpen(!isOpen)
+    };
+
 
     return (
         <>
             <Container>
                 <NavMenu>
                     <NavItemLogo>
-                        <img src={logoIMG} alt="logomarca oniQ" />
+                        <img src={logoIMG} alt="logomarca oniQ" onClick={scrollToTop} />
                     </NavItemLogo>
 
                     <NavMenuDesktop>
                         <nav>
                             <ul>
-                                <li><Linkss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(0, "home")}>Home</Linkss></li>
-                                <li><Linkss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(800, "service")}>Services</Linkss></li>
-                                <li><Linkss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(1800, "costumer")}>Customers</Linkss></li>
-                                <li><Linkss to="/" style={{ textDecoration: "none" }}  onClick={()=>handler(2200, "about")}>About us</Linkss></li>
-                                <li><Linkss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(2945, "contato")}>Contact us</Linkss></li>
+                                <li><Link className="link-menu" activeClass="active" onClick={() => scrollToTop()} spy={true} offset={-130} smooth={true} duration={100}>Home</Link></li>
+                                <li><Link className="link-menu" activeClass="active" to="container-service" spy={true} offset={-30} smooth={true} duration={100}>Services</Link></li>
+                                <li><Link className="link-menu" activeClass="active" to="container-costumer" spy={true} offset={-100} smooth={true} duration={100}>Customers</Link></li>
+                                <li><Link className="link-menu" activeClass="active" to="container-about" spy={true} offset={-110} smooth={true} duration={100}>About us</Link></li>
+                                <li><Link className="link-menu" activeClass="active" to="container-contato" spy={true} offset={-80} smooth={true} duration={100}>Contact us</Link></li>
                             </ul>
                         </nav>
                     </NavMenuDesktop>
 
                     <NavItemMenu>
-                        <img src={(isOpen?fecharMenu:menuMobile)} alt="menu oniQ" onClick={() => setIsOpen(!isOpen)}/>
+                        <img src={(isOpen ? fecharMenu : menuMobile)} alt="menu oniQ" onClick={() => setIsOpen(!isOpen)} />
                     </NavItemMenu>
                 </NavMenu>
             </Container>
             <SideBar isOpen={isOpen}>
                 <nav>
                     <ul>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(0, "home")}>Home</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(800, "service")}>Services</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(1800, "costumer")}>Customers</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }}  onClick={()=>handler(2200, "about")}>About us</Linksss></li>
-                        <li><Linksss to="/" style={{ textDecoration: "none" }} onClick={()=>handler(2945, "contato")}>Contact us</Linksss></li>
+                        <li><Link className="link-menu-sidebar" activeClass="active" onClick={() => scrollToTop()} spy={true} offset={-130} smooth={true} duration={100}>Home</Link></li>
+                        <li><Link className="link-menu-sidebar" activeClass="active" onClick={() => setIsOpen(!isOpen)} to="container-service" spy={true} offset={-30} smooth={true} duration={100}>Services</Link></li>
+                        <li><Link className="link-menu-sidebar" activeClass="active" onClick={() => setIsOpen(!isOpen)} to="container-costumer" spy={true} offset={-100} smooth={true} duration={100}>Customers</Link></li>
+                        <li><Link className="link-menu-sidebar" activeClass="active" onClick={() => setIsOpen(!isOpen)} to="container-about" spy={true} offset={-110} smooth={true} duration={100}>About us</Link></li>
+                        <li><Link className="link-menu-sidebar" activeClass="active" onClick={() => setIsOpen(!isOpen)} to="container-contato" spy={true} offset={-80} smooth={true} duration={100}>Contact us</Link></li>
                     </ul>
                 </nav>
             </SideBar>

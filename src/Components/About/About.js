@@ -10,7 +10,7 @@ import aboutIMG from "../../assets/about.png"
 import { Row, Col } from "react-bootstrap"
 export const About = () => {
     return (
-        <Container>
+        <Container id="container-about">
             <Row>
                 <Col sm={0} lg={5}>
                     <Fundo>

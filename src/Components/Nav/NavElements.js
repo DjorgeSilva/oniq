@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import { HashLink as HashLink } from 'react-router-hash-link';
-import { Link as Links } from "react-router-dom"
+import { Link } from "react-scroll"
 
 
 
@@ -73,6 +72,18 @@ export const NavMenuDesktop = styled.div`
             li{
                 display: inline;
                 margin-left: 5px;
+                .link-menu{
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    font-weight: bolder;
+                    color: ${props => props.theme.secundary_color};
+                    margin-right: 10px;
+                    text-decoration: none;
+                    &:hover{
+                        color: ${props => props.theme.primary_color};
+                    }
+                }
             }
         }
 
@@ -84,11 +95,12 @@ export const NavMenuDesktop = styled.div`
     }
 `
 
-export const Linkss = styled(HashLink)`
+export const Linkss = styled(Link)`
+    cursor: pointer;
     font-size: 1.3rem;
     text-align: center;
     margin-right: 15px;
-    color: ${props=> props.theme.secundary_color};
+    color: ${props => props.theme.secundary_color};
     text-transform: uppercase;
     font-weight: bold;
 `
@@ -138,6 +150,16 @@ export const SideBar = styled.div`
                 &:hover{
                     background: #f7f5f5
                 }
+
+                .link-menu-sidebar{
+                    font-size: 1.8rem;
+                    font-weight: bolder;
+                    color: ${props => props.theme.secundary_color};
+                    text-decoration: none;
+                    &:hover{
+                        color: ${props => props.theme.primary_color};
+                    }
+                }
             }
         }
     }
@@ -148,7 +170,7 @@ export const SideBar = styled.div`
 
 `
 
-export const Linksss = styled(Links)`
+export const Linksss = styled(Link)`
     font-size: 2.2rem;
     text-align: center;
     font-weight: bolder;

@@ -13,21 +13,24 @@ import {
 } from "./ServicesElements"
 import { Row, Col } from "react-bootstrap"
 import { Layout } from "../Layout/Layout"
+import {Link} from "react-scroll"
 
 export const Services = () => {
     return (
         <Layout>
-            <Container>
+            <Container id="container-service">
                 <h1>Services Available</h1>
                 <p>Check out our available services. We have 3 pillars to support the development of solutions for you: <span>Business, Development, and Design.</span></p>
 
                 <Grid>
                     <Row>
                         <Col sm={12} md={6} lg={4} xl={3} className="external">
-                            <img src={service1} alt="" />
-                            <InnerGrid className="inner" />
-                            <h3>Interface design and user experience</h3>
-                            <p>+ Details</p>
+                            <Link to="/details">
+                                <img src={service1} alt="" />
+                                <InnerGrid className="inner" />
+                                <h3>Interface design and user experience</h3>
+                                <p>+ Details</p>
+                            </Link>
                         </Col>
 
                         <Col sm={12} md={6} lg={4} xl={3} className="external">

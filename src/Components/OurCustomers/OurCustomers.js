@@ -22,7 +22,7 @@ import logo12 from "../../assets/logo12.jpg"
 export const OurCustomers = () => {
     return (
         <Layout>
-            <Container>
+            <Container id="container-costumer">
                 <Row>
 
                     <Col lg={4}>
